@@ -5,6 +5,7 @@ import solenoid
 from flask_basicauth import BasicAuth
 
 a=0
+solenoid_a=solenoid(4)
 
 app = Flask(__name__)
 
@@ -15,14 +16,16 @@ basic_auth = BasicAuth(app)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    global a
+    global solenoid_a
     print(request.method)
     if request.method == 'POST':
         if request.form.get('Encrypt') == 'Encrypt':
             if a==0:
-                LED(4).on()
+                solenoid_a.enable()
                 a=1
             elif a==1:
-                LED(4).off()
+                solenoid_a.disable()
                 a=0
             # pass
             print("Encrypted")

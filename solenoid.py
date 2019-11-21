@@ -3,19 +3,23 @@ class solenoid:
         self.id = id
 
     try:
-        import RPi.GPIO as GPIO
+        from gpiozero import LED
     except RuntimeError:
         print("Error importing RPi.GPIO!  This is probably because you need superuser privileges.  You can achieve this by using 'sudo' to run your script")
     
+    control=LED(4)
+    
     def init():
-        GPIO.setmode(GPIO.BOARD)
-        GPIO.setup(self.id, GPIO.OUT, initial=GPIO.LOW)
+        global control
+        control=LED(self.id)
 
     def isEnabled():
-        return GPIO.input(self.id)
+        return false
 
     def enable():
-        GPIO.output(self.id, GPIO.HIGH)
+        global control
+        control.on()
     
     def disable():
-        GPIO.output(self.id, GPIO.LOW)
+        global control
+        control.off()
