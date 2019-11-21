@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>UDJ Greenhouse - Settings</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+	<a href="/settings" class="w3-bar-item w3-button w3-padding-large">SETTINGS</a>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Title Section -->
+  <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px" id="band">
+    <h2 class="w3-wide">Greenhouse Settings</h2>
+    <p class="w3-opacity"><i>U of D Jesuit</i></p>
+  </div>
+
+  <!-- Operation Status -->
+  <div class="w3-white" id="operation">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-container w3-black">
+            <p><b>Manual Watering</b></p>
+			<div class="shelf-select" style="width:200px;">
+				<select>
+					<option value="0">Shelf 1</option>
+					<option value="1">Shelf 2</option>
+					<option value="2">Shelf 3</option>
+				</select>
+			</div>
+			<div class="time-select" style="width:200px;">
+				<select>
+					<option value="0">1min</option>
+					<option value="1">5min</option>
+					<option value="2">10min</option>
+					<option value="3">20min</option>
+				</select>
+			</div>
+			<form method="post" action="/">
+				<button class="w3-button w3-black" value="Encrypt" name="Encrypt">Button Button</button>
+            </div>
+        </form>
+  </div>
+            <p></p>
+          </div>
+        </div>
+        
+        <div class="w3-half w3-margin-bottom">
+          <div class="w3-container w3-black">
+            <p><b>Shelf 3</b></p>
+            <p class="w3-opacity">Moisture Status</p>
+			<span class="w3-tag w3-white w3-border w3-border-blue">0%</span>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+  
+<!-- End Page Content -->
+</div>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>UDJ Greenhouse</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+	<a href="/settings" class="w3-bar-item w3-button w3-padding-large">SETTINGS</a>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Title Section -->
+  <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px" id="band">
+    <h2 class="w3-wide" id="testHeader">Greenhouse Status</h2>
+    <p class="w3-opacity"><i>U of D Jesuit</i></p>
+  </div>
+
+  <!-- Operation Status -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding">Current Operation <span class="w3-tag w3-green w3-margin-left">Watering</span><span class="w3-tag w3-purple w3-margin-left">Manual</span></li>
+        <li class="w3-padding">Last Watered <span class="w3-tag w3-white w3-border w3-border-blue w3-margin-left">12:00pm</span></li>
+        <li class="w3-padding">Next Watering <span class="w3-tag w3-white w3-border w3-border-blue w3-margin-left">4:00pm</span></li>
+      </ul>
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-white">
+            <p><b>Shelf 1</b></p>
+            <p class="w3-opacity">Moisture Status</p>
+			<span class="w3-tag w3-white w3-border w3-border-blue">0%</span>
+            <p></p>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-white">
+            <p><b>Shelf 2</b></p>
+            <p class="w3-opacity">Moisture Status</p>
+			<span class="w3-tag w3-white w3-border w3-border-blue">0%</span>
+            <p></p>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-white">
+            <p><b>Shelf 3</b></p>
+            <p class="w3-opacity">Moisture Status</p>
+			<span class="w3-tag w3-white w3-border w3-border-blue">0%</span>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<script src="/static/jquery-3.4.1.min.js"></script>
+<script src="/static/solenoid.js"></script>
+
+</body>
+</html>
