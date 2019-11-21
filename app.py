@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request, jsonify
+from gpiozero import LED
 import time
 import solenoid
 from flask_basicauth import BasicAuth
+
+a=0
 
 app = Flask(__name__)
 
@@ -15,6 +18,12 @@ def index():
     print(request.method)
     if request.method == 'POST':
         if request.form.get('Encrypt') == 'Encrypt':
+            if a==0:
+                LED(4).on()
+                a=1
+            elif a==1:
+                LED(4).off()
+                a=0
             # pass
             print("Encrypted")
         elif  request.form.get('Decrypt') == 'Decrypt':
