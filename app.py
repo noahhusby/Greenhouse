@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, jsonify
 from gpiozero import LED
 import time
-import solenoid
+from solenoid import solenoid
 from flask_basicauth import BasicAuth
 
 a=0
-solenoid_a=solenoid(4)
+solenoid_a= solenoid(4)
 
 app = Flask(__name__)
 
